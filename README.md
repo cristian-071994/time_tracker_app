@@ -18,8 +18,8 @@ Una aplicación de línea de comandos para registrar el tiempo dedicado a distin
 
 1. Clona este repositorio:
 ```
-git clone https://github.com/tu-usuario/time-tracker-app.git
-cd time-tracker-app
+git clone https://github.com/tu-usuario/time_tracker_app.git
+cd time_tracker_app
 ```
 
 2. No requiere dependencias adicionales, solo Python estándar.
