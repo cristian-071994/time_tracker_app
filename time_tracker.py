@@ -1,10 +1,15 @@
+"""
+Aplicación para el seguimiento y registro de tiempo de actividades laborales.
+Permite registrar inicio y fin de jornada, actividades y consultar historial.
+"""
 import sqlite3
 import datetime
 import os
-import time
 
 
 class TimeTracker:
+    """Clase para gestionar el seguimiento de tiempo de actividades laborales."""
+
     def __init__(self):
         """Inicializa la aplicación de seguimiento de tiempo"""
         # Crear la base de datos si no existe
@@ -201,7 +206,12 @@ class TimeTracker:
         """Muestra el historial de días laborales y actividades"""
         # Obtener los últimos días laborales
         self.cursor.execute(
-            "SELECT id, start_time, end_time, total_duration FROM working_days ORDER BY start_time DESC LIMIT ?",
+            """
+    SELECT id, start_time, end_time, total_duration
+    FROM working_days
+    ORDER BY start_time DESC
+    LIMIT ?
+    """,
             (days,)
         )
         working_days = self.cursor.fetchall()
